@@ -6,7 +6,7 @@ const Title=(clickHandler)=>{
         {/* pozivanje funkcije iz grandfather componente - Props drilling*/}
         {/* Zdravo {name}, imas {age} godina. */}
         Zdravo
-      </h3>
+      </h3>  
     )
 }
 export default Title;
