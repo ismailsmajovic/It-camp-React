@@ -1,25 +1,56 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import Greeting from "./components/Greting.js";
+import Incrementer from "./components/incrementer/Incrementer.js";
 
 function App() {
+  const [count, setCount] = React.useState(0);
+  const handleClick2 = () => {
+    setCount(count + 1);
+  };
+
+  const handleClick = () => {
+    alert("Ova se funkcija nalazi u App.js");
+  };
+
+  const sayHello = (name) => {
+    alert(`Hello ${name}`);
+  };
+
+  // let count = 0;
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="card-container">
+      {/* <button onClick={() => sayHello("John")}>Click me</button>{" "} */}
+      {/* Primena funkcije onClick sa argumentom */}
+      {/* <button
+        onClick={() => {
+          sayHello("John");
+          console.log("Anonimna funkcija");
+        }}
+      >
+        {/* Primena funkcije onClick sa argumentom i primena neke anonimne funkcije */}
+      {/* Inline anonymus function
+      </button> */}
+
+      {count}
+      <button onClick={handleClick2}>Increase</button>
+      <Greeting name={"Dzenan"} handleParentClick={handleClick} />
+      <Incrementer />
     </div>
   );
 }
 
-export default App;
+export default App; 
+
+/*
+return (
+    <div className='card'>
+      {people.map((p)=>{
+        return(
+          <span>{p}</span>
+        )
+      })}
+    </div>
+  );
+}*/
