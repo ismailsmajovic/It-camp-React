@@ -1,56 +1,17 @@
 import React from "react";
-import "./App.css";
-import Greeting from "./components/Greting.js";
-import Incrementer from "./components/incrementer/Incrementer.js";
+import Parent from "./components/Parent/Parent";
 
-function App() {
-  const [count, setCount] = React.useState(0);
-  const handleClick2 = () => {
-    setCount(count + 1);
-  };
+const App =()=>{
+    const rucniklik =()=>{
+        alert('funkcija iz App')
+    }
 
-  const handleClick = () => {
-    alert("Ova se funkcija nalazi u App.js");
-  };
-
-  const sayHello = (name) => {
-    alert(`Hello ${name}`);
-  };
-
-  // let count = 0;
-
-  return (
-    <div className="card-container">
-      {/* <button onClick={() => sayHello("John")}>Click me</button>{" "} */}
-      {/* Primena funkcije onClick sa argumentom */}
-      {/* <button
-        onClick={() => {
-          sayHello("John");
-          console.log("Anonimna funkcija");
-        }}
-      >
-        {/* Primena funkcije onClick sa argumentom i primena neke anonimne funkcije */}
-      {/* Inline anonymus function
-      </button> */}
-
-      {count}
-      <button onClick={handleClick2}>Increase</button>
-      <Greeting name={"Dzenan"} handleParentClick={handleClick} />
-      <Incrementer />
-    </div>
-  );
+    return(
+        <div>
+            <button onClick={rucniklik}>App</button>
+            <Parent otacKlik={rucniklik}/>
+        </div>
+    )
 }
 
-export default App; 
-
-/*
-return (
-    <div className='card'>
-      {people.map((p)=>{
-        return(
-          <span>{p}</span>
-        )
-      })}
-    </div>
-  );
-}*/
+export default App;
