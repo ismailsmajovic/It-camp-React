@@ -1,11 +1,16 @@
 import React from "react";
-import Child from '../Parent/Child/Child.js'
+import Reset from "../../Reset";
+import Child from "./Child/Child";
+import AddNewCounter  from './Child/AddNewCounter';
+
 
 const Parent =({otacKlik})=>{
+    // <button onClick={otacKlik}>Sin</button
     return(
-        <div>
-            <button onClick={otacKlik}>Sin</button>
-            <Child deteKlik={otacKlik}/>
+        <div className="parent">
+             <Reset />
+            <AddNewCounter />
+            <Child deteKlik={otacKlik} />
         </div>
     )
 }
