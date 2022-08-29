@@ -5,7 +5,7 @@ const PostItem = ({ title, telo }) => {
   return (
     <div className="item">
       <h1> {title}</h1>
-      <h2>Description: {telo}</h2>
+      <h2>Description: {telo}</h2> 
     </div>
   );
 };

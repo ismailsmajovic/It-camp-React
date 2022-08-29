@@ -76,7 +76,7 @@ const listOfCrypto = [
               <h2>CryptoForm</h2>
               <label htmlFor="form"></label>
               <input type='text'></input>
-              <label></label>
+              <label></label> 
               <input type='number'></input>
               <button
                className="btn1" 

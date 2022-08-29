@@ -4,7 +4,7 @@ import './PostItem.css'
 
 const PostList = () => {
   const [data, setData] = useState([]);
-
+ 
   function getingData() {
     fetch(`https://jsonplaceholder.typicode.com/posts`)
       .then((el) => el.json())
