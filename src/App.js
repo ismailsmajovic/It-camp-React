@@ -7,6 +7,8 @@ import CryptoFrom from "./components/Crypto/CryptoFrom/CryptoForm";
 import CryptoList from "./components/Crypto/CryptoList/CryptoList";
 import SestiCas from "./components/CetvrtiCas/SestiCas/SestiCas";
 import Card1 from "./components/Temperature/Card1";
+import PostItem from "./components/Post/PostList/PostList";
+import PostList from "./components/Post/PostItem/PostItem";
 //import NewClass from "./components/newClass";
 //import TeamCard from "./components/Team/Team";
 
@@ -14,7 +16,8 @@ const App =()=>{
 
   return(
     <div>
-    <Card1/>
+      <PostItem/>
+      <PostList/>
     </div>
   )
    

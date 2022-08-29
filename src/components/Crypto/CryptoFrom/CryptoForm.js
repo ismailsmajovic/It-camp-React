@@ -44,6 +44,105 @@ const listOfCrypto = [
   ];
   
   const CryptoForm = () => {
+
+    const [cryptoList, setCryptoList]=useState(listOfCrypto);
+    const[userData, setUserData]= useState({
+      name: '',
+      value:''
+
+    })
+
+    const onAddCrypto =(event)=>{
+      event.preventDefault()
+
+      setCryptoList((prev)=>[
+        ...prev,{
+          id: Math.random().toString(36).slice(2, 7),
+          name: userData.name,
+          value: userData.value
+        }
+      ]
+      
+      )
+      setUserData({
+        name:'',
+        value: ''
+      })
+    }
+
+   return(
+          <div>
+            <form className="form">
+              <h2>CryptoForm</h2>
+              <label htmlFor="form"></label>
+              <input type='text'></input>
+              <label></label>
+              <input type='number'></input>
+              <button
+               className="btn1" 
+               onClick={onAddCrypto}
+               >Add</button>
+            </form>
+            <h3 className="h3">Crypto List Items</h3>
+            
+            {setCryptoList.map((value)=>{
+              <CryptoList 
+              key={value.id}
+              name={value.name}
+              value={value.value}
+              />
+            })}
+          </div>
+   )
+  };
+  
+  export default CryptoForm;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* 
+  
+  const CryptoForm = () => {
     const [cryptoList, setCryptoList] = useState(listOfCrypto);
     
     const [userData, setUserData] = useState({
@@ -127,6 +226,4 @@ const listOfCrypto = [
         ))}
       </div>
     );
-  };
-  
-  export default CryptoForm;
+  */

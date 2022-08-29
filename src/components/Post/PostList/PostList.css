@@ -1,0 +1,11 @@
+.item {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    width: 70vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    border-bottom: 2px black solid;
+    font-size: 15px;
+}

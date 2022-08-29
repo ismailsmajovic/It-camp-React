@@ -26,7 +26,59 @@ const CryptoList = ({
     deleteCrypto,
     
   }) => {
-    return (
+    return(
+      <div className=".crypto-list">
+        <div className=".crypto-list-item">
+          <p>{name}</p>
+          <p>{value}</p>
+          <button
+          className="btn2"
+          onClick={deleteCrypto}>X</button>
+        </div>
+      </div>
+    )
+   
+  };
+  
+  export default CryptoList;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* 
+   return (
       <div className="crypto-list">
         <div className="crypto-list-item">
           <p>{name}</p>
@@ -37,6 +89,4 @@ const CryptoList = ({
         </div>
       </div>
     );
-  };
-  
-  export default CryptoList;
+  */
