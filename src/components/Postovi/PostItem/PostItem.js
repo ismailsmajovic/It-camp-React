@@ -6,7 +6,7 @@ const PostList = () => {
   const [data, setData] = useState([]);
  
   function getingData() {
-    fetch(`https://jsonplaceholder.typicode.com/posts`)
+    fetch(`https://jsonplaceholder.typicode.co m/posts`)
       .then((el) => el.json())
       .then((prev) => setData(prev));
   }

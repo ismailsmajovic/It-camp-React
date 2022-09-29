@@ -11,18 +11,29 @@ import PostItem from "./components/Postovi/PostList/PostList";
 import PostList from "./components/Postovi/PostItem/PostItem";
 import axios from "axios";
 import Material from "./components/Material/Material";
+import { Route, Router } from "react-router-dom"; 
 //import NewClass from "./components/newClass";
 //import TeamCard from "./components/Team/Team";
 
 export default function App() {
   
   return(
-    <Material/>
+    <div className="">
+      <h1>Welcome to React Router</h1>
+      <Routers>
+        <Route path="/"></Route>
+        <Route path="about"></Route>
+      </Routers>
+    </div>
   )
   
   
   
   /*
+
+
+
+  <Material/>
 
   const BASE_URL = "https://api.quotable.io"; 
   
